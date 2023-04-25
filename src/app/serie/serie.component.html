@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <div class="col-6">
+    <div id="Avg" align="left" style="background-color:azure ; padding:10px ;  "></div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="h4">id  </th>
+          <th class="h4">name</th>
+          <th class="h4">channel</th>
+          <th class="h4">seasons</th>
+          <th class="h4">description</th>
+          <th class="h4">webpage</th>
+          <th class="h4">poster</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of series">
+          <td>
+            <dd>{{c.id}}</dd>
+          </td>
+          <td>
+            <dd><a href='{{c.webpage}}'>{{c.name}}</a></dd>
+          </td>
+          <td>
+            <dd>{{c.channel}}</dd>
+          </td>
+          <td>
+            <dd>{{c.seasons}}</dd>
+          </td>
+          <td>
+            <dd>{{c.description}}</dd>
+          </td>
+          <td>
+            <dd><a href='{{c.webpage}}'>{{c.webpage}}</a></dd>
+          </td>
+          <td>
+            <dd>{{c.poster}}</dd>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="col-sm-12" style="color:black">
+    Seasons average: {{avg}}
+  </div>
+</div>
